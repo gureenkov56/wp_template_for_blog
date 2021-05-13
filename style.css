@@ -1,0 +1,90 @@
+@font-face {
+    font-family: Exo-MediumItalic;
+    src: url(/fonts/Exo-MediumItalic.ttf);
+}
+
+@font-face {
+    font-family: Exo-Medium;
+    src: url(/fonts/Exo-Medium.ttf);
+}
+
+.body {
+  margin: 0;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 73px 1fr 300px;
+  /* grid-template-columns: 1132px; */
+  grid-template-areas:
+    "HEADER"
+    "CONTENT"
+    "FOOTER";
+}
+
+/* header */
+
+.header {
+  grid-area: "HEADER";
+}
+
+.header-container {
+  max-width: 1132px;
+  height: 100%;
+  margin: auto auto;
+  padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__link {
+  flex: 1;
+  text-align: left;
+  margin: auto 0;
+}
+
+.header__link li {
+  display: inline;
+  padding-right: 37px;
+  font-family: Exo-Medium;
+  font-size: 20px;
+  color: #a0a0a0;
+}
+
+.header__link ul {
+  padding-inline-start: 0;
+  padding-top: 10px;
+}
+
+.header__logo {
+  flex: 1;
+  text-align: center;
+  margin: auto 0;
+}
+
+.logo{
+    font-family: Exo-MediumItalic;
+    font-size: 30px;
+    color: #202020;
+}
+
+.header__social-icon {
+  flex: 1;
+  text-align: right;
+  margin: auto 0;
+}
+
+/* end header */
+
+/* content */
+
+.content-container{
+    grid-area: "CONTENT";
+    max-width: 1132px;
+    background-color: #fac;
+}
+
+.attached-post{
+    max-width: 100%;
+    height: 550px;
+    background: lightgray url('/image/content/mountain-lake.jpg') 0 no-repeat;
+    background-size: cover;
+}
