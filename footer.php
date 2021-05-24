@@ -2,29 +2,77 @@
      <div class="footer-container">
          <div class="footer-container__item">
              <span class="footer-container__headline">Categories</span>
-             <ul class="footer-container__ul">
+             <!-- <ul class="footer-container__ul">
                  <li>Simple</li>
                  <li>Theme</li>
                  <li>Background</li>
                  <li>Life</li>
-             </ul>
+             </ul> -->
+             <?php wp_nav_menu([
+                    'theme_location'  => 'bottom-categories-menu',
+                    'menu'            => 'footer-category',
+                    'container'       => false,
+                    'container_class' => '',
+                    'container_id'    => '',
+                    'menu_class'      => 'footer-container__ul',
+                    'menu_id'         => '',
+                    'echo'            => true,
+                    'fallback_cb'     => 'wp_page_menu',
+                    'before'          => '',
+                    'after'           => '',
+                    'link_before'     => '',
+                    'link_after'      => '',
+                    'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                    'depth'           => 0,
+                    'walker'          => '',
+                ]) ?>
          </div>
          <div class="footer-container__item">
              <span class="footer-container__headline">Pages</span>
-             <ul class="footer-container__ul">
-                 <li>News</li>
-                 <li>Projects</li>
-                 <li>New color</li>
-                 <li>Cooking</li>
-             </ul>
+             <?php wp_nav_menu([
+                    'theme_location'  => 'footer-second-menu',
+                    'menu'            => 'footer-second-menu',
+                    'container'       => false,
+                    'container_class' => '',
+                    'container_id'    => '',
+                    'menu_class'      => 'footer-container__ul',
+                    'menu_id'         => '',
+                    'echo'            => true,
+                    'fallback_cb'     => 'wp_page_menu',
+                    'before'          => '',
+                    'after'           => '',
+                    'link_before'     => '',
+                    'link_after'      => '',
+                    'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                    'depth'           => 0,
+                    'walker'          => '',
+                ]) ?>
          </div>
          <div class="footer-container__item">
              <span class="footer-container__headline">Third</span>
-             <ul class="footer-container__ul">
+             <!-- <ul class="footer-container__ul">
                  <li>Menu</li>
                  <li>Just</li>
                  <li>Reacle</li>
-             </ul>
+             </ul> -->
+             <?php wp_nav_menu([
+                    'theme_location'  => 'footer-third-menu',
+                    'menu'            => 'footer-third-menu',
+                    'container'       => false,
+                    'container_class' => '',
+                    'container_id'    => '',
+                    'menu_class'      => 'footer-container__ul',
+                    'menu_id'         => '',
+                    'echo'            => true,
+                    'fallback_cb'     => 'wp_page_menu',
+                    'before'          => '',
+                    'after'           => '',
+                    'link_before'     => '',
+                    'link_after'      => '',
+                    'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                    'depth'           => 0,
+                    'walker'          => '',
+                ]) ?>
          </div>
          <div class="footer-container__item">
              <div class="footer__logo logo"> <a href="/">Blog Name</a></div>

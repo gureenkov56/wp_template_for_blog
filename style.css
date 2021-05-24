@@ -96,15 +96,20 @@ p{
 
 .header__link ul {
   padding-inline-start: 0;
+  
 }
 
-.header__link li {
+.header__link li{
   display: inline;
   padding-right: 37px;
+}
+
+.header__link li a{
   font-family: "Exo 2", sans-serif;
   font-weight: medium;
   font-size: 20px;
   color: #a0a0a0;
+  text-decoration: none;
 }
 
 .header__logo {
@@ -275,9 +280,9 @@ p{
 .main-image{
   width: 100%;
   min-height: 70vh;
-  background: lightgray url("/image/content/air.jpg") 0 no-repeat;
   background-size: cover;
-  background-position: top;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .post-container{
@@ -332,12 +337,17 @@ p{
   margin-top: 20px;
 }
 
-.footer-container__ul li {
+.footer-container__ul li{
   list-style-type: none; /* Убираем маркеры */
   margin-top: 10px;
+}
+
+.footer-container__ul li a{
+  
   font-family: "Montserrat", sans-serif;
   font-size: 15px;
   color: #333333;
+  text-decoration: none;
 }
 
 .footer__social-icon {
