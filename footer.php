@@ -1,7 +1,7 @@
  <footer class="footer">
      <div class="footer-container">
          <div class="footer-container__item">
-             <span class="footer-container__headline">Categories</span>
+             <span class="footer-container__headline"><?php echo wp_get_nav_menu_name('bottom-categories-menu') ?></span>
              <!-- <ul class="footer-container__ul">
                  <li>Simple</li>
                  <li>Theme</li>
@@ -28,7 +28,7 @@
                 ]) ?>
          </div>
          <div class="footer-container__item">
-             <span class="footer-container__headline">Pages</span>
+             <span class="footer-container__headline"><?php echo wp_get_nav_menu_name('footer-second-menu') ?></span>
              <?php wp_nav_menu([
                     'theme_location'  => 'footer-second-menu',
                     'menu'            => 'footer-second-menu',
@@ -49,7 +49,7 @@
                 ]) ?>
          </div>
          <div class="footer-container__item">
-             <span class="footer-container__headline">Third</span>
+             <span class="footer-container__headline"><?php echo wp_get_nav_menu_name('footer-third-menu') ?></span>
              <!-- <ul class="footer-container__ul">
                  <li>Menu</li>
                  <li>Just</li>
@@ -75,7 +75,7 @@
                 ]) ?>
          </div>
          <div class="footer-container__item">
-             <div class="footer__logo logo"> <a href="/">Blog Name</a></div>
+             <div class="footer__logo logo"> <a href="/"><?php bloginfo('name'); ?></a></div>
              <div class="footer__social-icon">
                  <img src="/image/header/facebook.png" alt="" />
                  <img src="/image/header/v.png" alt="" />

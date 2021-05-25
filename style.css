@@ -222,45 +222,17 @@ p{
   justify-content: space-between;
 }
 
-.last-article__item1,
-.last-article__item2,
-.last-article__item3,
-.last-article__item4 {
+.last-article__a-container{
   flex: 1 300px;
   max-width: 90wv;
-  height: 45vh;
   margin: 2%;
+  text-decoration: none;
 }
 
-.last-article__item1 {
+.last-article__item {
+  height: 45vh;
   background-size: cover;
   background-position: center;
-  background-image: linear-gradient(rgb(82, 82, 82) 0%, 5%, rgba(0, 0, 0, 0) 80%),
-    url(image/content/air.jpg);
-  background-repeat: no-repeat;
-}
-
-.last-article__item2 {
-  background-size: cover;
-  background-position: center;
-  background-image: linear-gradient(rgb(82, 82, 82) 0%, 5%, rgba(0, 0, 0, 0) 80%),
-    url(image/content/workplace.jpg);
-  background-repeat: no-repeat;
-}
-
-.last-article__item3 {
-  background-size: cover;
-  background-position: center;
-  background-image: linear-gradient(rgb(82, 82, 82) 0%, 5%, rgba(0, 0, 0, 0) 80%),
-    url(image/content/city.jpg);
-  background-repeat: no-repeat;
-}
-
-.last-article__item4 {
-  background-size: cover;
-  background-position: center;
-  background-image: linear-gradient(rgb(82, 82, 82) 0%, 5%, rgba(0, 0, 0, 0) 80%),
-    url(image/content/way.jpg);
   background-repeat: no-repeat;
 }
 

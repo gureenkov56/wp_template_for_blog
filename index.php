@@ -4,12 +4,10 @@
   <div class="content-container">
     <div class="attached-post">
       <div class="attached-post__description">
-        <h1 class="attached-post__name">
-          Lorem ipsum for attach post...
-        </h1>
+        <h1 class="attached-post__name">Lorem ipsum for attach post...</h1>
         <span class="attached-post__subtitle">
-          Description for lorem ipsum post which has attach property so it
-          post placed on web site top
+          Description for lorem ipsum post which has attach property so it post
+          placed on web site top
         </span>
       </div>
     </div>
@@ -28,38 +26,32 @@
     </div>
 
     <div class="content-container__last-article">
+      <?php 
+      $posts = get_posts([
+        'numberposts' => 4,
+      ]);
+      // echo '<pre>';
+      // print_r($posts);
+      // echo '</pre>';
+      foreach ($posts as $post){
+        // echo $post->guid;
+        // echo $post->post_title;
+        // echo the_post_thumbnail_url(); ?>
+        <a href="<?php echo $post->guid ?>" class="last-article__a-container">
+            <div class="last-article__item" style="background-image: linear-gradient(rgb(82, 82, 82) 0%, 5%, rgba(0, 0, 0, 0) 80%), url(<?php the_post_thumbnail_url(); ?>);">
 
-      <?php if (have_posts()){
-         while (have_posts()){
-          the_post(); ?>
-          <!-- Цикл WordPress -->
-          <h2><?php the_title() ?></h2>
-        <?php }} else { ?>
-        <p>Записей нет.</p>
+
+              <!-- Цикл WordPress -->
+              <div class="last-article__item__headline">
+                <?php echo $post->post_title; ?>
+              </div>
+            </div>
+          </a>
       <?php } ?>
-
-      <div class="last-article__item1">
-        <div class="last-article__item__headline">
-          Napo mest for story life super vision
-        </div>
-      </div>
-      <div class="last-article__item2">
-        <div class="last-article__item__headline">
-          Napo mest for story life super vision
-        </div>
-      </div>
-      <div class="last-article__item3">
-        <div class="last-article__item__headline">
-          Napo mest for story life super vision
-        </div>
-      </div>
-      <div class="last-article__item4">
-        <div class="last-article__item__headline">
-          Napo mest for story life super vision
-        </div>
-      </div>
+      <?php wp_reset_postdata(); ?>
     </div>
   </div>
 </div>
 
 <?php get_footer() ?>
+</div>
