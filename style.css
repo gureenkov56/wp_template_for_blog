@@ -192,7 +192,9 @@ p{
   margin: 0 auto;
   height: 250px;
   width: 250px;
-  background: lightgray url(/image/index/me.jpg) 0 no-repeat;
+  background-color: lightgray;
+  background-image: url(/image/index/me.jpg);
+  background-repeat: no-repeat;
   background-size: cover;
   border-radius: 150px;
 }
