@@ -3,21 +3,35 @@
 <div class="content">
   <div class="content-container">
     <!-- закрепленный пост -->
-    <div class="attached-post">
-      <div class="attached-post__description">
-        <h1 class="attached-post__name">Lorem ipsum for attach post...</h1>
-        <span class="attached-post__subtitle">
-          Description for lorem ipsum post which has attach property so it post
-          placed on web site top
-        </span>
-      </div>
-    </div>
+    <?php
+    $params = array(
+      'posts_per_page' => -1, // нужно для отображения всех постов, без разделения по страницам
+      'post__in'  => get_option('sticky_posts'), // например Array ( [0] => 54 [1] => 1 )
+    );
+
+    $q = new WP_Query($params);
+
+    while ($q->have_posts()) : $q->the_post();
+      // HTML-шаблон вывода поста
+    ?>
+      <a href="<?php echo get_permalink(); ?>">
+        <div class="attached-post" style="background-image: url(<?php the_post_thumbnail_url(); ?>);">
+          <div class="attached-post__description">
+            <h1 class="attached-post__name"><?php echo the_title(); ?></h1>
+            <span class="attached-post__subtitle"><?php echo the_excerpt(); ?></span>
+          </div>
+        </div>
+      </a>
+    <?php
+    endwhile;
+    wp_reset_postdata();
+    ?>
 
     <!-- приветствие -->
     <?php
     // создаем фильтр
     $greating_page = get_pages([
-      'meta_key'     => 'greating',
+      'meta_key'     => 'greating-on-index',
       'meta_value'   => 'yes',
       'number'       => 1,
       'post_type'    => 'page',
@@ -33,7 +47,8 @@
         </div>
         <div class="about-me__text">
           <div class="about-me__headline"><?php the_title(); ?></div>
-          <div class="about-me__subtitle"> <?php the_content(); ?> </div>
+          <div class="about-me__subtitle"> <?php the_content(); ?> <a href="<?php echo get_author_posts_url(get_the_author_meta("ID")); ?>">Read more...</a></div>
+
         </div>
       </div>
     <?php
