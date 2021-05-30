@@ -271,6 +271,26 @@ a{
 
 /* end content page */
 
+/* pagination */
+
+.pagination-container{
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  margin-top: 5vh;
+}
+
+.page-numbers{
+  padding: 5px 10px;
+  text-decoration: none;
+}
+
+.current{
+  background-color: lightgray;
+  border-radius: 4px;
+}
+
+/* end pagination */
+
 
 /* footer */
 
