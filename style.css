@@ -270,6 +270,47 @@ a{
   padding-bottom: 6vh;
 }
 
+.related-posts-title{
+  text-align: center;
+  font-size: 5vh;
+  font-family: 'Exo 2', sans-serif;
+  font-style: italic;
+  color: #424141;
+}
+
+.content-container__related-post{
+  margin-top: 6vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.related-post__a-container{
+  flex: 1 300px;
+  max-width: 90wv;
+  margin: 2%;
+  text-decoration: none;
+}
+
+.related-post__item{
+  height: 45vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.related-post__item__headline{
+  padding: 1vh;
+  font-family: "Exo 2", sans-serif;
+  color: white;
+  font-size: 4vh;
+  font-style: italic;
+  font-weight: bold;
+}
+
+
+
 /* end content page */
 
 /* pagination */
@@ -358,7 +399,7 @@ a{
 
 @media screen and (max-width: 1000px) {
   .content-container{
-    padding: 0 10px;
+    padding: 0 5vw;
   }
 
   .header__link {
