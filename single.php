@@ -10,11 +10,13 @@
         <div class="post-container">
             <h1><?php the_title() ?></h1>
 
-            <?php the_content() ?>
+            <?php the_content();
+
+            wp_reset_postdata();
+            comments_template();
+            ?>
+
         </div>
-        <?php wp_reset_postdata(); ?>
-
-
 
         <?php
         //получаю ID привязаных постов из мета-значения
