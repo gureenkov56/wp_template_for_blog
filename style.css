@@ -333,6 +333,74 @@ a{
 
 /* end pagination */
 
+/* comment */
+
+.comment-respond{
+  margin-top: 15vh;
+}
+
+.comment__text-input{
+  font-size: 20px;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid rgb(92, 143, 253);
+}
+
+.comment__text-area{
+  width: 90%;
+}
+
+.submit{
+  font-family: 'Exo 2', sans-serif;
+  font-size: 3vh;
+  padding: 10px 15px;
+  background-color: #6eb9ff;
+  border-radius: 5px;
+  border: none;
+  color: #e6f4ff;
+  transition: background-color .5s;
+}
+
+.submit:hover{
+  cursor: pointer;
+  background-color: rgb(74, 117, 255)
+}
+
+.commentlist,
+.comment {
+  list-style-type: none;
+  padding: 0;
+}
+
+.comment-body{
+  background-color: rgb(244, 245, 255);
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.comment-author,
+.comment-author a{
+  font-size: 4vh;
+  font-family: 'Exo 2', sans-serif;
+  font-style: italic;
+  color: #777777;
+  text-decoration: none;
+}
+
+.comment-body a{
+  font-family: 'Exo 2', sans-serif;
+  color: #777777;
+  text-decoration: none;
+}
+
+.commentmetadata,
+.reply{
+  margin: 10px 0px;
+}
+
+/* end comment */
+
 
 /* footer */
 
