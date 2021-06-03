@@ -135,7 +135,7 @@ a{
 .header__social-icon {
   flex: 1;
   text-align: right;
-  padding: 13px 0;
+  padding: 5px 0;
 }
 
 /* end header */
@@ -469,8 +469,13 @@ a{
   text-decoration: none;
 }
 
+.footer__logo{
+  text-align: center;
+}
+
 .footer__social-icon {
   margin-top: 2vh;
+  text-align: center;
 }
 
 /* adaptive */

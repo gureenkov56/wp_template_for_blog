@@ -21,36 +21,38 @@
                 </div>
                 <div class="header__link">
                     <!-- <ul> -->
-                        <!-- <li>News</li>
+                    <!-- <li>News</li>
                         <li>Travel</li>
                         <li>Advance</li> -->
-                        <?php wp_nav_menu([
-                            'theme_location'  => 'top-left-menu',
-                            'menu'            => 'header-left',
-                            'container'       => false,
-                            'container_class' => '',
-                            'container_id'    => '',
-                            'menu_class'      => 'menu',
-                            'menu_id'         => '',
-                            'echo'            => true,
-                            'fallback_cb'     => 'wp_page_menu',
-                            'before'          => '',
-                            'after'           => '',
-                            'link_before'     => '',
-                            'link_after'      => '',
-                            'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-                            'depth'           => 0,
-                            'walker'          => '',
-                        ]) ?>
+                    <?php wp_nav_menu([
+                        'theme_location'  => 'top-left-menu',
+                        'menu'            => 'header-left',
+                        'container'       => false,
+                        'container_class' => '',
+                        'container_id'    => '',
+                        'menu_class'      => 'menu',
+                        'menu_id'         => '',
+                        'echo'            => true,
+                        'fallback_cb'     => 'wp_page_menu',
+                        'before'          => '',
+                        'after'           => '',
+                        'link_before'     => '',
+                        'link_after'      => '',
+                        'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                        'depth'           => 0,
+                        'walker'          => '',
+                    ]) ?>
                     <!-- </ul> -->
 
                 </div>
                 <div class="header__logo logo"><a href="/"><?php bloginfo('name'); ?></a></div>
-                <div class="header__social-icon">
-                    <img src="<?php echo get_template_directory_uri() ?>/image/header/facebook.png" alt="" />
-                    <img src="<?php echo get_template_directory_uri() ?>/image/header/v.png" alt="" />
-                    <img src="<?php echo get_template_directory_uri() ?>/image/header/soundcloud.png" alt="" />
-                    <img src="<?php echo get_template_directory_uri() ?>/image/header/in.png" alt="" />
-                </div>
+                <?php if (is_active_sidebar('social_icons')) : ?>
+                    <div class="header__social-icon">
+
+                        <?php dynamic_sidebar('social_icons'); ?>
+                        
+                    </div>
+
+                <?php endif; ?>
             </div>
         </header>
