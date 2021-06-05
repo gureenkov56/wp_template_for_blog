@@ -494,6 +494,10 @@ a{
 /* adaptive */
 
 @media screen and (max-width: 1000px) {
+  .content{
+    padding-top: 80px;
+  }
+
   .content-container{
     padding: 0 2vw;
   }
