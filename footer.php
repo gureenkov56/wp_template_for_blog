@@ -64,18 +64,21 @@
                 ]) ?>
          </div>
          <div class="footer-container__item">
-            <div class="footer__logo logo"> <a href="/"><?php bloginfo('name'); ?></a></div>
-             
+             <div class="footer__logo logo"> <a href="/"><?php bloginfo('name'); ?></a></div>
 
-            <?php if (is_active_sidebar('social_icons')) : ?>
-                <div class="footer__social-icon">
-                    <?php dynamic_sidebar('social_icons'); ?>
-                </div>
 
-            <?php endif; ?>
-            </div>
+             <?php if (is_active_sidebar('social_icons')) : ?>
+                 <div class="footer__social-icon">
+                     <?php dynamic_sidebar('social_icons'); ?>
+                 </div>
+
+             <?php endif; ?>
+         </div>
      </div>
+
  </footer>
+ <!-- mobile menu here, becouse z-index don't correct for some elements -->
+ 
  </div>
  <?php wp_footer(); ?>
  </body>
