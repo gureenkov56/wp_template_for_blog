@@ -1,6 +1,6 @@
 <?php get_header() ?>
 
-<div class="content">
+<div class="content" <?php if (is_user_logged_in()) echo 'style="margin-top: 2vh !important"' ?>>
     <div class="content-container">
         <h1 style="text-align: center !important;"><?php single_cat_title(""); ?></h1>
         <div class="content-container__last-article">
@@ -24,7 +24,7 @@
                     'prev_next'    => True,
                     'prev_text'    => __('«'),
                     'next_text'    => __('»'),
-            ]); ?>
+                ]); ?>
         </div>
     <?php
             } else {

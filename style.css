@@ -162,8 +162,8 @@ a{
 
 .content-container {
   max-width: 1132px;
-  margin: 20px auto;
-  padding: 0 20px;
+  margin: 0 auto;
+  padding: 80px 20px;
 }
 
 .attached-post {
@@ -333,6 +333,17 @@ a{
   font-weight: bold;
 }
 
+ figure {                /* for image block in content */
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  text-align: center;
+}
+
+img {
+  height: auto !important;
+}
 
 
 /* end content page */
@@ -494,12 +505,8 @@ a{
 /* adaptive */
 
 @media screen and (max-width: 1000px) {
-  .content{
-    padding-top: 80px;
-  }
-
   .content-container{
-    padding: 0 2vw;
+    padding: 5vh 2vw;
   }
 
   .header{

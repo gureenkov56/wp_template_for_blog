@@ -7,6 +7,9 @@ add_action('after_setup_theme', 'register_menus');
 add_action('widgets_init', 'my_register_sidebar');
 add_action('wp_footer', 'burger_menu');
 
+//удаляю авто-атрибуты wordpress для изображений  
+
+
 function connect_style()
 {
     // style
@@ -43,4 +46,6 @@ function burger_menu(){
     wp_enqueue_script('jquery');
     wp_enqueue_script('burger-menu', get_template_directory_uri() .'/assets/js/burger-menu.js');
 }
+
+
 ?>
