@@ -6,8 +6,8 @@ add_action('wp_enqueue_scripts', 'connect_style');
 add_action('after_setup_theme', 'register_menus');
 add_action('widgets_init', 'my_register_sidebar');
 add_action('wp_footer', 'burger_menu');
-
-//удаляю авто-атрибуты wordpress для изображений  
+do_action('after_setup_theme', 'setup_social_icons_plugin');
+add_action('admin_notices', 'my_plugin_notice'); // подсказка об установке плагина Social icons
 
 
 function connect_style()
@@ -23,9 +23,9 @@ function connect_style()
 function register_menus()
 {
     register_nav_menu('top-left-menu', 'Left menu in header');
-    register_nav_menu('bottom-categories-menu', 'Display all categories in footer');
-    register_nav_menu('footer-second-menu', 'Second menu in footer');
-    register_nav_menu('footer-third-menu', 'Third menu in footer');
+    register_nav_menu('bottom-left-menu', 'Display all categories in footer');
+    register_nav_menu('bottom-center-menu', 'Second menu in footer');
+    register_nav_menu('bottom-right-menu', 'Third menu in footer');
     register_nav_menu('mobile-menu', 'Mobile menu');
 }
 
@@ -42,10 +42,19 @@ function my_register_sidebar()
     );
 }
 
-function burger_menu(){
+function burger_menu()
+{
     wp_enqueue_script('jquery');
-    wp_enqueue_script('burger-menu', get_template_directory_uri() .'/assets/js/burger-menu.js');
+    wp_enqueue_script('burger-menu', get_template_directory_uri() . '/assets/js/burger-menu.js');
 }
 
+function my_plugin_notice()
+{
+?>
+    <div class="notice notice-success is-dismissible">
+        <p>For social media icons, install the plugin "Social Icons Widget & Block by WPZOOM". Next, in the "Top and bottom social icons" widget, place the plugin widget with the desired settings.</p>
+    </div>
+<?php
+}
 
 ?>
