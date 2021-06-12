@@ -9,6 +9,9 @@
 
         <div class="post-container">
             <h1><?php the_title() ?></h1>
+            <div class="post-container__tags">
+                <?php the_tags("", " ", ""); ?>
+            </div>
 
             <?php the_content();
 

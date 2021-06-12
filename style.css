@@ -1,17 +1,15 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v7.0.29,
-* Autoprefixer: v9.7.6
-* Browsers: last 4 version
-*/
-
 /**
  * Theme Name:  Air art
  * Author:      Gureenkov Nik
  * Author URI:  gureenkov56@gmail.com
  * Description: Minimalistic air temlate for blog about incredible life
- * Tags:        blog, minimal, minimalist, minimalistic, simple, just
+ * Tags:        one-column, flexible-header, accessibility-ready, custom-colors, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, sticky-post, threaded-comments, translation-ready, block-patterns
  * Version:     1.0
+ * License:     none
+ * License URI: none
+ * Requires PHP:7.4 or later
+ * Text Domain: None
+ * Tested up to:5.0
  */
 
 .body {
@@ -333,12 +331,109 @@ a{
   padding-bottom: 6vh;
 }
 
+.post-container__tags{
+  margin-top: 20px;
+}
+
+.post-container__tags a{
+  font-family: "Exo 2", sans-serif;
+  background-color: rgb(224, 224, 224);
+  padding: 3px 10px;
+  border-radius: 4px;
+  text-decoration: none;
+  color: rgb(66, 66, 66);
+}
+
 .related-posts-title{
   text-align: center;
   font-size: 5vh;
   font-family: 'Exo 2', sans-serif;
   font-style: italic;
   color: #424141;
+}
+
+.alignnone {
+    margin: 5px 20px 20px 0;
+}
+ 
+.aligncenter, div.aligncenter {
+    display:block;
+    margin: 5px auto 5px auto;
+}
+ 
+.alignright {
+    float:right;
+    margin: 5px 0 20px 20px;
+}
+ 
+.alignleft {
+    float:left;
+    margin: 5px 20px 20px 0;
+}
+ 
+.aligncenter {
+    display: block;
+    margin: 5px auto 5px auto;
+}
+ 
+a img.alignright {
+    float:right;
+    margin: 5px 0 20px 20px;
+}
+ 
+a img.alignnone {
+    margin: 5px 20px 20px 0;
+}
+ 
+a img.alignleft {
+    float:left;
+    margin: 5px 20px 20px 0;
+}
+ 
+a img.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+ 
+.wp-caption {
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    max-width: 96%; /* Image does not overflow the content area */
+    padding: 5px 3px 10px;
+    text-align: center;
+}
+ 
+.wp-caption.alignnone {
+    margin: 5px 20px 20px 0;
+}
+ 
+.wp-caption.alignleft {
+    margin: 5px 20px 20px 0;
+}
+ 
+.wp-caption.alignright {
+    margin: 5px 0 20px 20px;
+}
+ 
+.wp-caption img {
+    border: 0 none;
+    height: auto;
+    margin:0;
+    max-width: 98.5%;
+    padding:0;
+    width: auto;
+}
+ 
+.wp-caption p.wp-caption-text {
+    font-size:11px;
+    line-height:17px;
+    margin:0;
+    padding:0 4px 5px;
+} 
+
+.wp-block-image{
+  font-family: "Exo 2", sans-serif;
 }
 
 .content-container__related-post{

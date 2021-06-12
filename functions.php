@@ -8,6 +8,7 @@ add_action('widgets_init', 'my_register_sidebar');
 add_action('wp_footer', 'burger_menu');
 do_action('after_setup_theme', 'setup_social_icons_plugin');
 add_action('admin_notices', 'my_plugin_notice'); // подсказка об установке плагина Social icons
+add_theme_support('post-thumbnails', array('post')); // для записей и страниц
 
 
 function connect_style()

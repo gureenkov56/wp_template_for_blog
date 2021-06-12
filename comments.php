@@ -29,11 +29,14 @@ comment_form([
 if($comments){?>
     <ul class="commentlist">
         <?php wp_list_comments([
-            'style' => 'ul',
+            'style'       => 'ul',
             'avatar_size' => '20px',
-            'max_depth' => 3,
+            'max_depth'   => 3,
+            'page'              => 1,
+            'per_page'          => 0,
         ]); ?>
     </ul>
     <?php
 }
+paginate_comments_links();
 ?>
