@@ -5,13 +5,12 @@
     <!-- закрепленный пост -->
     <?php
     $params = array(
-      'posts_per_page' => -1, // нужно для отображения всех постов, без разделения по страницам
-      'post__in'  => get_option('sticky_posts'), // например Array ( [0] => 54 [1] => 1 )
+      'post__in'  => get_option('sticky_posts'),
+      'posts_per_page' => '1',
     );
 
     $q = new WP_Query($params);
 
-    while ($q->have_posts()) : $q->the_post();
       // HTML-шаблон вывода поста
     ?>
       <a href="<?php echo get_permalink(); ?>">
@@ -23,7 +22,6 @@
         </div>
       </a>
     <?php
-    endwhile;
     wp_reset_postdata();
     ?>
 

@@ -30,34 +30,34 @@ h6 {
 }
 
 h1{
-  font-size: 6vh;
+  font-size: 300%;
 }
 
 h2{
-  font-size: 5vh;
+  font-size: 200%;
 }
 
 h3{
-  font-size: 4vh;
+  font-size: 150%;
 }
 
 h4{
-  font-size: 3vh;
+  font-size: 150%;
 }
 
 h5{
-  font-size: 2vh;
+  font-size: 150%;
 }
 
 
 h6{
-  font-size: 1vh;
+  font-size: 150%;
 }
 
 p{
   font-family: 'Montserrat', sans-serif;
   max-width: 800px;
-  font-size: 3vh;
+  font-size: 1.2rem;
   font-weight: 500;
   line-height: 1.4;
 }
@@ -206,7 +206,7 @@ a{
 
 .attached-post__name {
   font-family: "Exo 2", sans-serif;
-  font-size: 8vh;
+  font-size: 300%;
   color: white;
   font-style: italic;
   margin-bottom: 1vh;
@@ -215,7 +215,6 @@ a{
 .attached-post__subtitle {
   font-family: "Montserrat", sans-serif;
   color: white;
-  font-size: 3vh;
 }
 
 .content-container__about-me {
@@ -255,14 +254,13 @@ a{
 .about-me__headline {
   font-family: "Exo 2", sans-serif;
   font-style: italic;
-  font-size: 8vh;
+  font-size: 300%;
   color: #202020;
 }
 
 .about-me__subtitle {
   margin-top: 1vh;
   font-family: "Montserrat", sans-serif;
-  font-size: 3vh;
   color: #424141;
 }
 
@@ -308,7 +306,7 @@ a{
   padding: 1vh;
   font-family: "Exo 2", sans-serif;
   color: white;
-  font-size: 4vh;
+  font-size: 150%;
   font-style: italic;
   font-weight: bold;
 }
@@ -346,7 +344,7 @@ a{
 
 .related-posts-title{
   text-align: center;
-  font-size: 5vh;
+  font-size: 150%;
   font-family: 'Exo 2', sans-serif;
   font-style: italic;
   color: #424141;
@@ -479,7 +477,7 @@ a img.aligncenter {
   padding: 1vh;
   font-family: "Exo 2", sans-serif;
   color: white;
-  font-size: 4vh;
+  font-size: 150%;
   font-style: italic;
   font-weight: bold;
 }
